@@ -1,0 +1,44 @@
+﻿@model Sistema_de_Informes_de_Analisis_Financieros.Models.Empresa
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar</h1>
+
+<h3>¿Está seguro de eliminar este registro?</h3>
+<div>  
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Nombre Empresa:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nomempresa)
+        </dd>
+        <dt class = "col-sm-2">
+            Descripción:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descempresa)
+        </dd>
+        <dt class = "col-sm-2">
+            
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Razonsocial)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdsectorNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdsectorNavigation.Nomsector)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Idempresa" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-success">Volver a la lista</a>
+    </form>
+</div>

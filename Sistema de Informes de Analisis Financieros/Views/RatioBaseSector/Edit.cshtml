@@ -1,0 +1,32 @@
+﻿@model Sistema_de_Informes_de_Analisis_Financieros.Models.Ratiobasesector
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <h1 class="text-center">Editar Valor Base</h1>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Idratio" />
+            <input type="hidden" asp-for="Idsector" />
+            <div class="form-group">
+                <label asp-for="Valorratiob" class="control-label">Valor</label>
+                <input asp-for="Valorratiob" class="form-control" />
+                <span asp-validation-for="Valorratiob" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Editar" class="btn btn-block btn-primary" />
+                <a asp-action="Index" class="btn btn-block btn-danger">Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

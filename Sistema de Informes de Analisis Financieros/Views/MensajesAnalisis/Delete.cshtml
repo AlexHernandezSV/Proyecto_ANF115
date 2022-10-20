@@ -1,0 +1,17 @@
+﻿@model Sistema_de_Informes_de_Analisis_Financieros.Models.MensajesAnalisis
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar</h1>
+
+<h3>¿Estás seguro de eliminar este registro?</h3>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="idMensaje" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-success">Regresar a la lista</a>
+    </form>
+</div>

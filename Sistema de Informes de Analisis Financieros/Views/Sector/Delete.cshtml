@@ -1,0 +1,26 @@
+﻿@model Sistema_de_Informes_de_Analisis_Financieros.Models.Sector
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar</h1>
+
+<h3>¿Estas seguro de eliminar este registro?</h3>
+<div>   
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Nombre Sector: 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nomsector)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Idsector" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-success">Volver a la lista</a>
+    </form>
+</div>
