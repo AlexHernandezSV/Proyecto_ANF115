@@ -5,20 +5,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container col-12 col-md-9 mb-5">
-    <div class="card border-dark mb-1">
+<div class="container col-20 col-md-9 mb-5">
+    <div class="card border-dark mb-9">
         <div class="card-body text-dark text-center">
-            <h5 class="card-title font-italic">"@ViewBag.nomEmpresa"</h5>
-            <p class="card-text font-weight-bold" color="Blue">CATÁLOGO DE CUENTAS.</p>
+            <h5 class="card-title font-weight-bold">"@ViewBag.nomEmpresa"</h5>
+            <p class="card-text font-weight-bold" >CATÁLOGO DE CUENTAS.</p>
         </div>
         @if (!Model.Any())
         {
-            <div class="alert alert-info">
+            <div class="alert alert-info" style="background-color: #409bd8;">
                 Favor registrar un catalogo de cuentas, puede subir su archivo en este link: 
-                <a class="ml-1" asp-controller="Empresas" asp-action="Edit" asp-route-id="@ViewBag.idEmpresa">Ir a edición de empresa</a>
+                <a class="ml-1" style="color:#FF0000" asp-controller="Empresas" asp-action="Edit" asp-route-id="@ViewBag.idEmpresa">Ir a edición de empresa</a>
             </div>
         }
-        <table class="table text-justify">
+        <table class="table table-dark table-sm">
             <thead class="table-active">
                 <tr>
                     <th>

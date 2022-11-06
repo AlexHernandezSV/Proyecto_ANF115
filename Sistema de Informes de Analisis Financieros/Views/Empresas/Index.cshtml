@@ -13,9 +13,9 @@
             <i class="" aria-hidden="true"></i>&nbspCrear Nueva Empresa
         </a>
     </div>
-    <table class="table table-responsive">
+    <table class="table table-responsive table-dark table-sm">
         <thead class="thead-dark text-center">
-            <tr>
+            <tr >
                 <th>
                     @Html.DisplayNameFor(model => model.Nomempresa)
                 </th>
@@ -49,14 +49,16 @@
                     @Html.DisplayFor(modelItem => item.IdsectorNavigation.Nomsector)
                 </td>
                 <td>
+                    <a class="btn btn-info px-2 py-1" asp-action="Details" asp-route-id="@item.Idempresa">
+                        <i class="button" aria-hidden="true">Ver</i>
+                    </a>
+                    <br>
+
                     <a class="btn btn-warning px-2 py-1" asp-action="Edit" asp-route-id="@item.Idempresa">
                         <i class="button" aria-hidden="true">Editar</i>
                     </a>
                     
-                    <a class="btn btn-info px-2 py-1" asp-action="Details" asp-route-id="@item.Idempresa">
-                        <i class="button" aria-hidden="true">Ver</i>
-                    </a>
-                    
+                    <br>
                     <a class="btn btn-danger px-2 py-1" asp-action="Delete" asp-route-id="@item.Idempresa">
                         <i class="button" aria-hidden="true">Eliminar</i>
                     </a>
