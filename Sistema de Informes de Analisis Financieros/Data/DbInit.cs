@@ -263,7 +263,49 @@ namespace Sistema_de_Informes_de_Analisis_Financieros.Data
                 {
                     context.Add(r);
                 }
-            }            
+            }
+
+            if (!context.Tipocuenta.Any())
+            {
+                var tipoCuenta = new Tipocuenta[]
+                {
+                    new Tipocuenta{
+                        Nomtipocuenta = "ACTIVO CORRIENTE"                    
+                    },
+                    new Tipocuenta{
+                        Nomtipocuenta = "ACTIVO NO CORRIENTE"
+                    },
+                    new Tipocuenta{
+                        Nomtipocuenta = "PASIVO CORRIENTE"
+                    },
+                    new Tipocuenta{
+                        Nomtipocuenta = "PASIVO NO CORRIENTE"
+                    },
+                    new Tipocuenta{
+                        Nomtipocuenta = "PATRIMONIO"
+                    },
+                    new Tipocuenta{
+                        Nomtipocuenta = "INGRESOS"
+                    },
+                    new Tipocuenta{
+                        Nomtipocuenta = "OTROS"
+                    },
+                    new Tipocuenta{
+                        Nomtipocuenta = "ACTIVO"
+                    },
+                    new Tipocuenta{
+                        Nomtipocuenta = "PASIVO"
+                    },
+                    new Tipocuenta{
+                        Nomtipocuenta = "GASTOS"
+                    },
+                };
+                foreach (Tipocuenta t in tipoCuenta)
+                {
+                    context.Add(t);
+                }
+            }
+
             context.SaveChanges();
         }
     }
