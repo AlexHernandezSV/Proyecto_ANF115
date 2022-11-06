@@ -9,12 +9,12 @@
     <div class="card border-dark mb-1">
         <div class="card-body text-dark text-center">
             <h5 class="card-title font-italic">"@ViewBag.nomEmpresa"</h5>
-            <p class="card-text font-weight-bold">CATÁLOGO DE CUENTAS.</p>
+            <p class="card-text font-weight-bold" color="Blue">CATÁLOGO DE CUENTAS.</p>
         </div>
         @if (!Model.Any())
         {
             <div class="alert alert-info">
-                No tiene registrado un catálogo de cuentas para su empresa, puede subir su archivo en este link: 
+                Favor registrar un catalogo de cuentas, puede subir su archivo en este link: 
                 <a class="ml-1" asp-controller="Empresas" asp-action="Edit" asp-route-id="@ViewBag.idEmpresa">Ir a edición de empresa</a>
             </div>
         }
