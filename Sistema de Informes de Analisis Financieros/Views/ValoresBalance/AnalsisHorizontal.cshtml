@@ -16,14 +16,14 @@
     // int vale = ViewBag.existe;
 
 }
-<h1>Analasis   Horizontal</h1>
+<h1>Analasis Horizontal</h1>
 @if (ViewBag.nocuenta)
 {
 
     <div class="card border-primary mb-3">
         <div class="card-header"><i class="fa fa-info-circle" aria-hidden="true"></i><p>Informe</p></div>
         <div class="card-body ">
-            <h2 class="card-title">Oh, Oh, Parece que no cuenta con una empresa</h2>
+            <h2 class="card-title">Parece que no cuenta con una empresa</h2>
             <p class="card-text">
                 <h3>Para poder realizar un analisis debe agregar una empresa y valores de balance</h3>
                 <h6>Ingrese aquí para agregar un nuevo balance:</h6>
@@ -43,8 +43,8 @@ else
             <div class="card border-info mb-3 ">
                 <div class="card-header"> @ViewData["an1"]</div>
                 <div class="card-body text-info">
-                    <h5 class="card-title">Resumen</h5>
-                    <p class="card-text">
+                    <h5 class="card-title text-black-50">Resumen</h5>
+                    <p class="card-text text-dark">
                         @ViewBag.mensajebueno
 
                     </p>
@@ -75,7 +75,7 @@ else
 
 
                 <div class="input-group mb-3" style="margin:20px;">
-                    <input type="submit" class="btn btn-info" value="Analizar">
+                    <input type="submit" class="btn btn-dark" value="Analizar">
                 </div>
             </div>
            
@@ -85,7 +85,7 @@ else
 
 
 
-        <table class="table table-striped">
+        <table class="table table-border table-dark">
             <thead class="thead-dark ">
                 <tr>
                     <th>
@@ -98,7 +98,7 @@ else
                         @ViewData["an2"]
                     </th>
                     <th>
-                        Diferencia
+                        Variación
                     </th>
 
                 </tr>
