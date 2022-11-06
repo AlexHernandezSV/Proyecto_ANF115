@@ -16,12 +16,12 @@
             <div class="form-group row">
                 <label asp-for="celdaCuenta" class="col-sm-3 col-form-label">Celda de Cuentas:</label>
                 <div class="col-11 col-md-8">
-                    <input asp-for="celdaCuenta" class="form-control" name="celdaCuenta" placeholder="Número de celda, ej.: B1" required>
+                    <input asp-for="celdaCuenta" class="form-control" name="celdaCuenta" placeholder="Número de celda, ej.: A1" required>
                 </div>
                 <div class="col-sm-1">
                     <span class="info">
                         <i data-toggle="popover" data-placement="top"
-                           data-content="El número de celda donde empieza la columna que tiene descritos los nombres de las cuentas"
+                           data-content="El número de celda donde empieza la columna que tiene el nombre de las cuentas"
                            data-container="body" data-trigger="click" title="Número de celda"
                            class="fa fa-question-circle" aria-hidden="true"></i>
                     </span>
@@ -50,7 +50,7 @@
                         <div class="input-group-prepend">
                             <label for="anio" class="input-group-text">Año 1:</label>
                         </div>
-                        <input asp-for="anios" name="anios[p0].anio" class="form-control m-input" placeholder="Año a evaluar ej.: 2019" required>
+                        <input asp-for="anios" name="anios[p0].anio" class="form-control m-input" placeholder="Año a evaluar ej.: 2022" required>
                     </div>
                     @*<span asp-validation-for="anios[p0].anio" class="text-danger"></span>*@
                 </div>
@@ -70,7 +70,7 @@
             </div>
             <div class="form-group">                
                 <label class="custom-file-upload" for="fileupload">
-                    Elegir Archivo
+                    Seleccionar Archivo
                 </label>
                 <input type="file" id="fileupload" name="files" class="btn btn-success form-control" value="Subir Balance General" />                
             </div>
