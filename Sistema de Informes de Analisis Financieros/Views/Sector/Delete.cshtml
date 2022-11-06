@@ -5,9 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Eliminar</h1>
+<h1>¿Estas seguro de eliminar este registro?</h1>
 
-<h3>¿Estas seguro de eliminar este registro?</h3>
 <div>   
     <dl class="row">
         <dt class = "col-sm-2">
@@ -21,6 +20,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Idsector" />
         <input type="submit" value="Eliminar" class="btn btn-danger" /> |
-        <a asp-action="Index" class="btn btn-success">Volver a la lista</a>
+        <a asp-action="Index" class="btn btn-success">Cancelar</a>
     </form>
 </div>
