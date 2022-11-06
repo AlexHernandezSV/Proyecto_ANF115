@@ -76,6 +76,8 @@
                             </a>
                         </li>
                     }
+                    @if (User.IsInRole("Administrator")==false)
+                    {
                     <li class="header">Herramientas</li>
                     <li>
                         <a asp-area="" asp-controller="ValoresBalance" asp-action="AnalsisHorizontal">
@@ -84,7 +86,7 @@
                     </li>
                     <li>
                         <a asp-area="" asp-controller="ValoresBalance" asp-action="AnalsisVertical">
-                            <i class="fa fa-arrow-down" aria-hidden="true"></i> Analizis vertical
+                            <i class="fa fa-arrow-down" aria-hidden="true"></i> Análisis vertical
                         </a>
                     </li>
                     <li>
@@ -92,6 +94,7 @@
                             <i class="fa fa-line-chart" aria-hidden="true"></i> Ratios financieros
                         </a>
                     </li>
+                    }
                 </ul>
             </nav>
         }
