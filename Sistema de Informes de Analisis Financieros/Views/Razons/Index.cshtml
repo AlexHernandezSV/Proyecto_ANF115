@@ -49,8 +49,8 @@ else
         {
             <div class="row">
                 <div class="courses-container col-12">
-                    <div class="course col-12">
-                        <div class="course-preview col-6">
+                    <div class="course col-5">
+                        <div >
                             <h6>Ratio:</h6>
                             <h4> @Html.DisplayFor(modelItem => item.nombreRazon)</h4>
                             <h6>Tipo:</h6>
@@ -79,15 +79,9 @@ else
                                     }
                                 }
                             }
-                        </div>
-                        <div class="course-info col-6 text-center">
-                            <h6>Formula</h6>
-
-                            <h5> @Html.DisplayFor(modelItem => item.numerador)</h5>
-                            <hr style="border: 1px solid black;" />
-                            <h5> @Html.DisplayFor(modelItem => item.denominador)</h5>
-                            <br />
-                            <a asp-action="AnalisisRazon" asp-route-idRazon="@item.idRazon" class="btnx btn-block">Detalles</a>
+                            <div class="course-info col-6 text-center">
+                            <a asp-action="AnalisisRazon" asp-route-idRazon="@item.idRazon" class="btn btn-success">Analizar</a>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -5,14 +5,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Mensajes Personalizables para el Análisis</h1>
+<h1>Personalizar mensajes de analisis</h1>
 <div class="mb-4 mt-4">
-    <a class="btn rounded-0 text-light" style="background-color: #409bd8;" asp-action="Create">
-        <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbspCrear Nuevo Mensaje
+    <a class="btn rounded-0 text-light" style="background-color: #239B56;" asp-action="Create">
+        <i aria-hidden="true"></i>&nbspCrear Nuevo Mensaje
     </a>
 </div>
-<table class="table table-dark table-sm">
-    <thead class="thead-dark text-center">
+<table class="table table-striped">
+    <thead class="text-center">
         <tr>
             <th>
                 IdRatio
@@ -35,7 +35,7 @@
             <th>
                 Mensaje Igual que Promedio de Empresas
             </th>
-            <th>
+            <th colspan="2">
                 Acciones
             </th>
         </tr>
@@ -65,15 +65,18 @@
                 @Html.DisplayFor(modelItem => item.mensajeIgualEmp)
             </td>
             <td>
-                <a class="btn btn-warning px-2 py-1 rounded-circle" asp-action="Edit" asp-route-id="@item.idMensaje">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                <a class="btn btn-success px-2 py-1" asp-action="Edit" asp-route-id="@item.idMensaje">
+                    <i aria-hidden="true">Editar</i>
                 </a>
                 @*<a class="btn btn-info px-2 py-1 rounded-circle text-dark" asp-action="Details" asp-route-id="@item.idMensaje">
                     <i class="fa fa-eye" aria-hidden="true"></i>
                 </a>*@
-                <a class="btn btn-danger px-2 py-1 rounded-circle rounded text-dark" asp-action="Delete" asp-route-id="@item.idMensaje">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                </a>
+                
+            </td>
+            <td>
+                    <a class="btn btn-danger px-2 py-1" asp-action="Delete" asp-route-id="@item.idMensaje">
+                        <i aria-hidden="true">Eliminar</i>
+                    </a>
             </td>
         </tr>
 }
